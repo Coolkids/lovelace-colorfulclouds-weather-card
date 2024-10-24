@@ -1,9 +1,13 @@
+console.info("%c  彩云天气 CARD  \n%c  Version 2023.06.01 ",
+  "color: orange; font-weight: bold; background: black", 
+  "color: white; font-weight: bold; background: dimgray");
+
 (function (factory) {
   typeof define === 'function' && define.amd ? define(factory) :
   factory();
 }((function () { 'use strict';
   
-    const includeDomains = ["weather"];
+  const includeDomains = ["weather"];
 	const windDirections = [
 	  "N",
 	  "NNE",
@@ -15491,6 +15495,7 @@
 	
 	
     if (!weather || !weather.attributes || !weather.attributes.daily_forecast) {
+      console.log("Please, check your weather entity")
       return p`
         <style>
           .card {
